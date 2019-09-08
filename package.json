@@ -1,0 +1,45 @@
+{
+  "name": "campsite-booking-system-mobile",
+  "description": "Mobile app of the Campsite Booking System",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "16.9.0",
+    "react-native": "0.60.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.9.2",
+    "@types/react-native": "^0.60.12",
+    "@types/react-test-renderer": "^16.9.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "16.9.0",
+    "tslint": "^5.19.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.6.2"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "lint": "tslint 'src/**/*.{tsx,ts}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{tsx,ts}": [
+      "tslint",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
